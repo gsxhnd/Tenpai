@@ -1,0 +1,22 @@
+[workspace]
+members = ["riichi"]
+
+[workspace.package]
+name = "Riichi"
+version = "0.1.0"
+edition = "2021"
+authors = ["gsxhnd"]
+homepage = ""
+description = ""
+repository = "https://github.com/gsxhnd/Riichi"
+license = "MIT license"
+categories = [""]
+keywords = []
+exclude = [".gitignore", ".cargo/config"]
+rust-version = "1.68"
+
+[path]
+riichi = { path = "riichi" }
+
+[workspace.dependencies]
+tensorflow = { version = "0.21", features = ["tensorflow_gpu"] }

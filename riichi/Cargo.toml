@@ -1,0 +1,14 @@
+[package]
+name = "riichi"
+version = "0.0.1"
+edition = "2021"
+
+
+[[bin]]
+name = "riichi"
+path = "src/main.rs"
+test = false
+bench = false
+
+[dependencies]
+tensorflow = { workspace = true, features = ["tensorflow_gpu"] }

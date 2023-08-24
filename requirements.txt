@@ -1,0 +1,2 @@
+requests~=2.28.1
+tensorflow~=2.6.5
