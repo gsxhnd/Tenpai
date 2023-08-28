@@ -1,5 +1,5 @@
-from tensorflow.keras import Sequential
-from tensorflow.keras.layers import Dense
+from tensorflow.python.keras import Sequential
+from tensorflow.python.keras.layers import Dense
 
 classifier = Sequential()
 classifier.add(Dense(5, activation='relu', name="test_in", input_dim=5)) # Named input
@@ -10,4 +10,4 @@ classifier.compile(optimizer ='adam', loss='binary_crossentropy', metrics=['accu
 
 classifier.fit([[0.1, 0.2, 0.3, 0.4, 0.5]], [[1]], batch_size=1, epochs=1);
 
-classifier.save('examples/keras_single_input_saved_model', save_format='tf')
+classifier.save('output', save_format='tf')
