@@ -8,7 +8,7 @@ fn main() {
     let signature_output_parameter_name = "test_out";
 
     // Initialize save_dir, input tensor, and an empty graph
-    let save_dir = "examples/keras_single_input_saved_model";
+    let save_dir = "output";
     let tensor: Tensor<f32> = Tensor::new(&[1, 5])
         .with_values(&[0.1, 0.2, 0.3, 0.4, 0.5])
         .expect("Can't create tensor");

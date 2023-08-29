@@ -1,6 +1,8 @@
+input
+output
+
 # python
 .venv
-output
 
 # Rust
 /target
