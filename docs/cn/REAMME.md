@@ -18,13 +18,6 @@ python 部分
 rust 部分
 加载模型 --> 计算
 
-模型:
-discard model   舍牌
-riichi model    立直
-chow model      吃
-pong model      碰
-kong model      杠
-
 ## 怎么下载牌谱数据
 
 ## 参考
