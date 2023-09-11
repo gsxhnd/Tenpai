@@ -25,6 +25,3 @@ rust 部分
 Suphx：掌握麻将与深度强化学习: <https://arxiv.org/pdf/2003.13590.pdf>
 
 Mortal: <https://github.com/Equim-chan/Mortal>
-
-- <https://blog.csdn.net/u013169673/article/details/105486469/>
-- <https://blog.csdn.net/qq_42914528/article/details/105383642>
