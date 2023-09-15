@@ -1,9 +1,5 @@
+<!-- markdownlint-disable MD033 -->
 # Suphx：掌握麻将与深度强化学习
-
-论文地址：  <https://arxiv.org/pdf/2003.13590.pdf>
-
-- <https://blog.csdn.net/u013169673/article/details/105486469/>
-- <https://blog.csdn.net/qq_42914528/article/details/105383642>
 
 ## Suphx AI 算法摘要
 
@@ -35,6 +31,34 @@
 
 除了输入和输出维度之外，所有模型的网络结构都差不多，具体结构和维度如下图下表所示。在吃、碰、杠模型中，除了状态特征和look-ahead特征以外，还有对哪些牌吃、碰、杠的信息。另外，这些模型都是没有池化层的，因为每个通道中的每一列都有自己的含义，所以池化之后会导致信息损失。
 
+- 牌型特征：自己的手牌、其他玩家的可见牌、宝牌、所有打出牌的序列。例如，N的前4维用来编码自己的手牌，如图3所示，每一行表示34种牌，每种牌最多有4张，所以用4行来编码手牌。
+- 整数特征：各个玩家的累积分数、剩余可摸牌数。离散到buckets中，再用0和1表示激活对应的bucket
+- 类别特征：当前轮数（一局游戏8-12轮）、庄家、counters of repeat dealer、Riichi bets。直接在一行的34维向量中使用0或1来表示。
+- Look ahead features：通过搜索的方式，计算打出某张牌后获得一定分数的概率。例如，用一行特征来表示，打出一个特定牌，并经过3次换牌后，可以赢取12000分数的概率；再用一行表示打出一张特定牌，并经过2次换牌后，可以赢取6000分的概率。Suphx中这种特征有100多个，并在搜索时进行了一些简化：深度优先和忽略对手行为。相当于只看自己的手牌，打出某张牌后，距离获胜的概率。
+
+<table style="text-align:center;">
+  <tr>
+    <td></td>
+    <td>discard</td>
+    <td>riichi</td>
+    <td>chow</td>
+    <td>pong</td>
+    <td>kong</td>
+  </tr>
+  <tr>
+    <td>Input</td>
+    <td colspan="2">35 x 838</td>
+    <td colspan="3">34 x 958</td>
+ </tr>
+ <tr>
+    <td>Output</td>
+    <td >34</td>
+    <td colspan=4>2</td>
+ </tr>
+</table>
+
+各个模型的网络结构大体相同，输入经过卷积后，连接50层类似resnet的结构，最后连接输出层到指定的维度。因为Chow、Pong这种只需要输出是否，导致输出维度不全相同，模型最后几层有些区别。具体参考表2和图4。
+
 ### 算法
 
 Suphx 学习过程分三个阶段
@@ -49,7 +73,7 @@ Suphx 学习过程分三个阶段
 
 self-play
 
-#### 熵正则化分布式强化学习
+#### 熵正则化分布式强化学习 (Distributed Reinforcement Learning with Entropy Regularization)
 
 ---
 
@@ -88,8 +112,17 @@ self-play
 2. 适应：根据这K个出牌顺序用策略梯度来微调离线训练的策略。
 3. 推理：用微调过的策略来进行本局游戏。
 
+## 尾
+
 ![fig1]
 ![fig2]
 [fig1]:<http://test.com>
 [fig2]:<http://test.com>
+
+论文地址：  <https://arxiv.org/pdf/2003.13590.pdf>
+
 [fig3]:<https://pic-1257414393.cos.ap-hongkong.myqcloud.com/tenpai_project/suphx_figure_3.png>
+
+- <https://blog.csdn.net/u013169673/article/details/105486469/>
+- <https://blog.csdn.net/qq_42914528/article/details/105383642>
+- <https://zhuanlan.zhihu.com/p/139764115>

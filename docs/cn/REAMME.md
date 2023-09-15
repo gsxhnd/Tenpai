@@ -2,7 +2,7 @@
 
 ## prepare environment
 
-```python
+```text
 python verison 3.11
 python -m venv .venv
 cargo check
@@ -21,7 +21,5 @@ rust 部分
 ## 怎么下载牌谱数据
 
 ## 参考
-
-Suphx：掌握麻将与深度强化学习: <https://arxiv.org/pdf/2003.13590.pdf>
 
 Mortal: <https://github.com/Equim-chan/Mortal>
