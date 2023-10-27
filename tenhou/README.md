@@ -1,8 +1,10 @@
 # Tenhou
 
+凤凰卓数据下载和牌谱log
+
 ```shell
 # 凤凰卓对局每小时数据信息 只包含场次ID
-# https://tenhou.net/sc/raw/dat/2023/scc20230101.html.gz
+# https://tenhou.net/sc/raw/dat/2023/scc20230101.html.gzdf
 
 # 凤凰卓每年的对局数据 只包含场次ID
 # https://tenhou.net/sc/raw/scraw2022.zip
@@ -20,3 +22,5 @@
 4. 转换牌谱到具体对局信息
 
 json 命名  年月日小时分钟-场次ID 200902201110-2009022011gm-00a9-0000-d7935c6d
+
+- log: 下载详细的牌谱数据

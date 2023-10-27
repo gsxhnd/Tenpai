@@ -2,13 +2,13 @@
 members = ["riichi"]
 
 [workspace.package]
-name = "Riichi"
+name = "Tenpai"
 version = "0.1.0"
 edition = "2021"
 authors = ["gsxhnd"]
 homepage = ""
 description = ""
-repository = "https://github.com/gsxhnd/Riichi"
+repository = "https://github.com/gsxhnd/Tenpai"
 license = "MIT license"
 categories = [""]
 keywords = []

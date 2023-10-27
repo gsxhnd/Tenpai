@@ -5,6 +5,8 @@ tasks:
   mod:
     cmds:
       - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+      - go mod tidy
+      - cargo check
   train:
     cmds:
       - python data_train/train.py
