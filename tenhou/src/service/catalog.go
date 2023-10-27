@@ -1,4 +1,4 @@
-package catalog
+package service
 
 import (
 	"bufio"
@@ -15,6 +15,7 @@ import (
 
 	"github.com/antchfx/htmlquery"
 	"github.com/go-gota/gota/dataframe"
+	"github.com/google/wire"
 )
 
 type paifuList struct {
@@ -159,3 +160,5 @@ func (c *catalog) ReadSingleFile(filePath string) {
 		}
 	}
 }
+
+var CatalogSet = wire.NewSet(NewCatalog)
