@@ -20,7 +20,7 @@ riichi = { path = "riichi" }
 tenhou_collect = { path = "tenhou-collect" }
 
 [workspace.dependencies]
-clap = { version = "4.3", features = ["derive", "env"] }
+clap = { version = "4.4", features = ["derive", "env"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_yaml = "0.9"
 tensorflow = { version = "0.21", features = ["tensorflow_gpu"] }
