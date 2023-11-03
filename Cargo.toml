@@ -1,5 +1,5 @@
 [workspace]
-members = ["riichi"]
+members = ["riichi", "tenhou-collect"]
 
 [workspace.package]
 name = "Tenpai"
@@ -17,6 +17,12 @@ rust-version = "1.68"
 
 [path]
 riichi = { path = "riichi" }
+tenhou_collect = { path = "tenhou-collect" }
 
 [workspace.dependencies]
+clap = { version = "4.3", features = ["derive", "env"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
 tensorflow = { version = "0.21", features = ["tensorflow_gpu"] }
+tracing = { version = "0.1" }
+tracing-subscriber = "0.3"
