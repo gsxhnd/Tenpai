@@ -1,25 +1,28 @@
 mod cmd;
-mod flag;
+mod config;
 
-use crate::flag::CliFlag;
-use clap::Parser;
-use clap::{Arg, ArgAction, Command};
+use std::fs;
 use tracing::info;
 
 fn main() {
-    // let cli = CliFlag::parse();
-    let cmd = Command::new("")
-        .bin_name("tenhou")
-        .version("v1")
-        .about("about")
-        .subcommand_required(true)
-        .subcommand(Command::new("crawl"))
-        .subcommand(Command::new("catalog"))
-        .subcommand(Command::new("log").about("log convert"));
-
+    let cmd = cmd::new_cmd();
     tracing_subscriber::fmt::init();
+    let matches = cmd.get_matches();
 
-    let _matches = cmd.get_matches();
-    // info!("Hello, world!,{},{:?}", cli.debug, cmd.get_long_flag());
-    info!("Hello, world!");
+    match matches.subcommand() {
+        Some(("log", sub_m)) => {
+            let config = sub_m
+                .get_one::<std::path::PathBuf>("config")
+                .expect("`port`is required");
+            info!("log sub m: {:?}, config {:?}", sub_m, config);
+
+            info!("current path: {:?}", std::env::current_dir());
+            let content = fs::read_to_string(config).expect("read config path");
+            let config_data: config::Config =
+                serde_yaml::from_str(content.as_str()).expect("serialize config failed");
+
+            info!("config: {:?}", config_data)
+        }
+        _ => {}
+    }
 }
