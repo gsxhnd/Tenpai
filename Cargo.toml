@@ -1,5 +1,5 @@
 [workspace]
-members = ["riichi", "tenhou-collect"]
+members = ["riichi"]
 
 [workspace.package]
 name = "Tenpai"
@@ -17,7 +17,6 @@ rust-version = "1.68"
 
 [path]
 riichi = { path = "riichi" }
-tenhou_collect = { path = "tenhou-collect" }
 
 [workspace.dependencies]
 clap = { version = "4.4", features = ["derive", "env"] }
