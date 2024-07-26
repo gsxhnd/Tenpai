@@ -1,4 +1,4 @@
-tenhou_data
+data
 input
 output
 
@@ -7,4 +7,3 @@ output
 
 # Rust
 /target
-conf/config.yaml
