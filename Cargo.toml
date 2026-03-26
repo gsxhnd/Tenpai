@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+
+[workspace.package]
+name = "Tenpai"
+version = "0.1.0"
+edition = "2021"
+authors = ["gsxhnd"]
+homepage = ""
+description = ""
+repository = "https://github.com/gsxhnd/Tenpai"
+license = "MIT license"
+categories = [""]
+keywords = []
+exclude = [".gitignore", ".cargo/config"]
+rust-version = "1.86"
