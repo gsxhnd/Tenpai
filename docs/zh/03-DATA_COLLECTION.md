@@ -56,7 +56,7 @@ Tenpai 的数据工作不应停留在“下载天凤 JSON 并存库”。
 - 开局信息
 - 配牌
 - 摸牌
-- 打牌
+- 弃牌
 - 立直
 - 吃碰杠
 - 和牌 / 流局
@@ -78,9 +78,9 @@ Tenpai 的数据工作不应停留在“下载天凤 JSON 并存库”。
 
 ## 4. 训练数据合同
 
-### 4.1 打牌样本
+### 4.1 弃牌样本
 
-每当轮到目标玩家打牌，并且存在合法打牌动作时，生成一条 `discard sample`。
+每当轮到目标玩家弃牌，并且存在合法弃牌动作时，生成一条 `discard sample`。
 
 建议字段：
 - `log_id`
@@ -223,7 +223,7 @@ Tenpai 的数据工作不应停留在“下载天凤 JSON 并存库”。
 
 ### 8.1 与训练文档保持一致
 
-样本层输出的 `state_features` 应与 `docs/zh/TRAINING.md` 保持同一套编码思路，优先包括：
+样本层输出的 `state_features` 应与 `docs/zh/04-TRAINING.md` 保持同一套编码思路，优先包括：
 - 手牌计数
 - 弃牌信息
 - 副露信息
@@ -290,5 +290,5 @@ Tenpai 的数据工作不应停留在“下载天凤 JSON 并存库”。
 - 防止项目继续停留在“只有原始 JSON，没有训练样本合同”的阶段
 
 相关文档：
-- 训练设计见 [TRAINING.md](./TRAINING.md)
-- 架构边界见 [ARCHITECTURE.md](./ARCHITECTURE.md)
+- 训练设计见 [04-TRAINING.md](./04-TRAINING.md)
+- 架构边界见 [02-ARCHITECTURE.md](./02-ARCHITECTURE.md)

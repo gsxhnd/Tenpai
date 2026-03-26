@@ -6,9 +6,9 @@ Tenpai 是一个面向四人立直麻将 AI 的研究型项目，当前以 `Suph
 
 - 当前仓库以文档和项目骨架为主
 - 主线围绕数据样本、训练设计和评估路径展开
-- 具体阶段规划见 `docs/ROADMAP.md`
+- 具体阶段规划见 `docs/08-ROADMAP.md`
 
 ## 从这里开始
 
-- 文档入口：[`docs/zh/README.md`](./docs/zh/README.md)
-- 项目路线图：[`docs/ROADMAP.md`](./docs/ROADMAP.md)
+- 文档入口：[`docs/zh/01-README.md`](./docs/zh/01-README.md)
+- 项目路线图：[`docs/08-ROADMAP.md`](./docs/08-ROADMAP.md)

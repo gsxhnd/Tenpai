@@ -6,7 +6,7 @@
 
 ## 模型
 
-- `discard model`：打牌模型
+- `discard model`：弃牌模型
 - `riichi model`：立直模型
 - `chi model`：吃模型
 - `pon model`：碰模型
@@ -46,7 +46,7 @@
 
 ## 相关文档
 
-- [TRAINING.md](./TRAINING.md)
-- [ARCHITECTURE.md](./ARCHITECTURE.md)
-- [DATA_COLLECTION.md](./DATA_COLLECTION.md)
-- [MAJSOUL_VALIDATION.md](./MAJSOUL_VALIDATION.md)
+- [04-TRAINING.md](./04-TRAINING.md)
+- [02-ARCHITECTURE.md](./02-ARCHITECTURE.md)
+- [03-DATA_COLLECTION.md](./03-DATA_COLLECTION.md)
+- [07-MAJSOUL_VALIDATION.md](./07-MAJSOUL_VALIDATION.md)

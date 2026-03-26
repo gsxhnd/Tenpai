@@ -9,10 +9,10 @@
 
 开始写代码前，建议先按以下顺序阅读：
 
-1. [ARCHITECTURE.md](./ARCHITECTURE.md)
-2. [DATA_COLLECTION.md](./DATA_COLLECTION.md)
-3. [TRAINING.md](./TRAINING.md)
-4. [MAJSOUL_VALIDATION.md](./MAJSOUL_VALIDATION.md)（仅在做实验扩展时阅读）
+1. [02-ARCHITECTURE.md](./02-ARCHITECTURE.md)
+2. [03-DATA_COLLECTION.md](./03-DATA_COLLECTION.md)
+3. [04-TRAINING.md](./04-TRAINING.md)
+4. [07-MAJSOUL_VALIDATION.md](./07-MAJSOUL_VALIDATION.md)（仅在做实验扩展时阅读）
 
 这样可以避免：
 - 先写实现，后发现文档目标不一致
@@ -58,7 +58,7 @@
 
 ### 3.3 第三优先级：多模型扩展
 
-在打牌模型稳定后，再逐步加入：
+在弃牌模型稳定后，再逐步加入：
 - `riichi_model`
 - `chi_model`
 - `pon_model`
@@ -133,13 +133,13 @@
 如果后续多人协作，建议按主线拆任务：
 1. 数据解析与样本合同
 2. 特征编码与数据读取
-3. 打牌模型监督学习基线
+3. 弃牌模型监督学习基线
 4. 离线评估与指标体系
 5. 其他动作模型与实验项
 
 这种拆法更贴近当前项目真实阶段，也更便于验证每一步是否真的前进。
 
 相关文档：
-- 架构说明见 [ARCHITECTURE.md](./ARCHITECTURE.md)
-- 数据设计见 [DATA_COLLECTION.md](./DATA_COLLECTION.md)
-- 训练设计见 [TRAINING.md](./TRAINING.md)
+- 架构说明见 [02-ARCHITECTURE.md](./02-ARCHITECTURE.md)
+- 数据设计见 [03-DATA_COLLECTION.md](./03-DATA_COLLECTION.md)
+- 训练设计见 [04-TRAINING.md](./04-TRAINING.md)

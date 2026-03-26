@@ -134,7 +134,7 @@
 
 ### 5.2 阶段二：静态界面识别
 
-如果一定要走雀魂方向，下一步也应先做静态图像识别实验，而不是直接自动打牌。
+如果一定要走雀魂方向，下一步也应先做静态图像识别实验，而不是直接自动弃牌。
 
 建议先回答：
 - 固定分辨率下能否稳定识别关键区域
@@ -196,6 +196,6 @@
 4. 再决定是否值得投入雀魂实验
 
 相关文档：
-- 训练设计见 [TRAINING.md](./TRAINING.md)
-- 架构边界见 [ARCHITECTURE.md](./ARCHITECTURE.md)
-- 数据样本设计见 [DATA_COLLECTION.md](./DATA_COLLECTION.md)
+- 训练设计见 [04-TRAINING.md](./04-TRAINING.md)
+- 架构边界见 [02-ARCHITECTURE.md](./02-ARCHITECTURE.md)
+- 数据样本设计见 [03-DATA_COLLECTION.md](./03-DATA_COLLECTION.md)
